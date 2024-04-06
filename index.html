@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multiple Checking Odd and Even by JavaScript</title>
+
+    <style>
+      .for-even {
+        background: green;
+        color: white;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+      }
+      
+      .for-odd {
+        background: red;
+        color: white;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+      }
+    </style>
   </head>
   <body>
     <!-- 1st part start  -->
     <div id="show-result"></div>
-    <script>
+    <!-- <script>
       let number = 11;
       showResult = document.getElementById("show-result");
 
@@ -17,57 +33,57 @@
       } else {
         showResult.innerHTML = number + " is odd";
       }
-    </script>
+    </script> -->
     <!-- 1st part end -->
 
     <!-- 2nd part start -->
-    <input type="text" id="number" />
+    <!-- <input type="text" id="number" />
     <button id="button">Submit</button>
-    <div id="show-result-odd-even"></div>
+    <div id="show-result-odd-even"></div> -->
 
     <script>
-      const button = document.getElementById("button");
-      button.addEventListener("click", function () {
-        const numberForChecking = document.getElementById("number").value;
-        const showResultOddEven = document.getElementById(
-          "show-result-odd-even"
-        );
+      // const button = document.getElementById("button");
+      // button.addEventListener("click", function () {
+      //   const numberForChecking = document.getElementById("number").value;
+      //   const showResultOddEven = document.getElementById(
+      //     "show-result-odd-even"
+      //   );
 
-        // function start
-        function getOddEvenByJavaScript(param) {
-          if (param % 2 == 0) {
-            return (showResultOddEven.innerHTML = param + " is even");
-          } else {
-            return (showResultOddEven.innerHTML = param + " is odd");
-          }
-        }
-        getOddEvenByJavaScript(numberForChecking);
-      });
+      //   // function start
+      //   function getOddEvenByJavaScript(param) {
+      //     if (param % 2 == 0) {
+      //       return (showResultOddEven.innerHTML = param + " is even");
+      //     } else {
+      //       return (showResultOddEven.innerHTML = param + " is odd");
+      //     }
+      //   }
+      //   getOddEvenByJavaScript(numberForChecking);
+      // });
     </script>
     <!-- 2nd part end -->
 
     <!-- Checking multiple number start -->
-    <div id="multiple-number-result-show"></div>
+    <!-- <div id="multiple-number-result-show"></div> -->
 
     <script>
-    //   let multipleNumberResultShow = document.getElementById(
-    //     "multiple-number-result-show"
-    //   );
+      //   let multipleNumberResultShow = document.getElementById(
+      //     "multiple-number-result-show"
+      //   );
 
-    //   multipleNumbers = [10, 11, 12, 15];
-    //   multipleNumbersLength = multipleNumbers.length;
+      //   multipleNumbers = [10, 11, 12, 15];
+      //   multipleNumbersLength = multipleNumbers.length;
 
-    //   for (let i = 0; i < multipleNumbersLength; i++) {
-    //     if (multipleNumbers[i] % 2 == 0) {
-    //       div = document.createElement("div");
-    //       newDiv = multipleNumberResultShow.appendChild(div);
-    //       newDiv.innerHTML = multipleNumbers[i] + " is even number";
-    //     } else {
-    //       div = document.createElement("div");
-    //       newDiv = multipleNumberResultShow.appendChild(div);
-    //       newDiv.innerHTML = multipleNumbers[i] + " is odd number";
-    //     }
-    //   }
+      //   for (let i = 0; i < multipleNumbersLength; i++) {
+      //     if (multipleNumbers[i] % 2 == 0) {
+      //       div = document.createElement("div");
+      //       newDiv = multipleNumberResultShow.appendChild(div);
+      //       newDiv.innerHTML = multipleNumbers[i] + " is even number";
+      //     } else {
+      //       div = document.createElement("div");
+      //       newDiv = multipleNumberResultShow.appendChild(div);
+      //       newDiv.innerHTML = multipleNumbers[i] + " is odd number";
+      //     }
+      //   }
     </script>
     <!-- Checking multiple number end -->
 
@@ -79,7 +95,6 @@
     <script>
       let buttonForm = document.getElementById("buttonForm");
       buttonForm.addEventListener("click", function () {
-        
         multipleNumberResultShowForm = document.getElementById(
           "multiple-number-result-show-form"
         );
@@ -89,13 +104,15 @@
         multipleNumbersLengthForm = multipleNumbersFormData.length;
 
         for (let i = 0; i < multipleNumbersLengthForm; i++) {
-          if (multipleNumbersForm[i] % 2 == 0) {
+          if (multipleNumbersFormData[i] % 2 == 0) {
             div = document.createElement("div");
             newDiv = multipleNumberResultShowForm.appendChild(div);
+            newDiv.classList.add("for-even");
             newDiv.innerHTML = multipleNumbersFormData[i] + " is even number";
           } else {
             div = document.createElement("div");
             newDiv = multipleNumberResultShowForm.appendChild(div);
+            newDiv.classList.add("for-odd");
             newDiv.innerHTML = multipleNumbersFormData[i] + " is odd number";
           }
         }
